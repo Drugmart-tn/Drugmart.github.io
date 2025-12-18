@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Wellness Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .background-container {
+            background-image: url('images/background.jpg'); /* Same as index.html */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Background Container -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                <span>Wellness<span>Essentials</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                <li><a href="instructions.html"><i class="fas fa-book"></i> Instructions</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact</a></li>
+                <li>
+                    <a href="cart.html" class="active cart-link">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="page-title">Your Shopping Cart</h1>
+            
+            <div class="cart-layout">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded via JS -->
+                    <div class="empty-cart" id="emptyCart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some wellness products to get started!</p>
+                        <a href="products.html" class="cta-button">Browse Products</a>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping">$5.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">$5.00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button checkout-btn" id="checkoutBtn" disabled>Proceed to Checkout</button>
+                    
+                    <div class="payment-methods-info">
+                        <p><i class="fas fa-money-bill-wave"></i> Cash on Delivery Available</p>
+                        <p><i class="fas fa-university"></i> EFT Payments Accepted</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Complete Your Order</h2>
+            
+            <form id="checkoutForm">
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Personal Information</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Shipping Address</h3>
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apartment">Apartment, Suite, Unit (Optional)</label>
+                        <input type="text" id="apartment" placeholder="Apt 123, Building B">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code *</label>
+                            <input type="text" id="zip" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="AU">Australia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                    
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <div class="payment-content">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div>
+                                    <h4>Cash on Delivery</h4>
+                                    <p>Pay when you receive your order</p>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="eft">
+                            <div class="payment-content">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Electronic Funds Transfer</h4>
+                                    <p>Bank transfer or online payment</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="eft-details" id="eftDetails" style="display: none;">
+                        <h4>EFT Payment Instructions</h4>
+                        <div class="bank-details">
+                            <p><strong>Bank:</strong> Wellness Bank International</p>
+                            <p><strong>Account Name:</strong> Wellness Essentials Ltd</p>
+                            <p><strong>Account Number:</strong> 1234 5678 9012 3456</p>
+                            <p><strong>Branch Code:</strong> 123456</p>
+                            <p><strong>Reference:</strong> Your Order Number</p>
+                        </div>
+                        <div class="notice">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Please include your order number as reference. Send proof of payment to payments@wellnessessentials.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><i class="fas fa-clipboard-check"></i> Order Review</h3>
+                    <div class="order-review" id="orderReview">
+                        <!-- Order items will be added here -->
+                    </div>
+                </div>
+                
+                <div class="terms-agreement">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" required>
+                        <span>I agree to the <a href="#" onclick="return false;">Terms & Conditions</a> and <a href="#" onclick="return false;">Privacy Policy</a></span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="cta-button submit-order-btn">
+                    <i class="fas fa-lock"></i> Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content confirmation-modal">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Confirmed!</h2>
+            <p class="confirmation-message">Thank you for your purchase. Your order has been received successfully.</p>
+            
+            <div class="order-details">
+                <div class="detail-row">
+                    <span>Order Number:</span>
+                    <strong id="orderId">WE-123456</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Payment Method:</span>
+                    <span id="paymentMethod">Cash on Delivery</span>
+                </div>
+                <div class="detail-row">
+                    <span>Total Amount:</span>
+                    <strong id="orderTotal">$0.00</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Estimated Delivery:</span>
+                    <span id="deliveryDate">3-5 business days</span>
+                </div>
+            </div>
+            
+            <p class="confirmation-note">You will receive a confirmation email shortly with tracking information.</p>
+            
+            <div class="confirmation-buttons">
+                <button id="continueShopping" class="cta-button secondary">Continue Shopping</button>
+                <button id="printReceipt" class="cta-button">
+                    <i class="fas fa-print"></i> Print Receipt
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                    </div>
+                    <p><i class="fas fa-lock"></i> Secure Checkout</p>
+                    <p><i class="fas fa-shield-alt"></i> Your information is protected</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Need Help?</h3>
+                    <ul>
+                        <li><a href="instructions.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> Contact Support</a></li>
+                        <li><a href="#" onclick="return false;"><i class="fas fa-shipping-fast"></i> Delivery Info</a></li>
+                        <li><a href="#" onclick="return false;"><i class="fas fa-exchange-alt"></i> Returns Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-icons">
+                        <i class="fas fa-money-bill-wave" title="Cash"></i>
+                        <i class="fas fa-university" title="Bank Transfer"></i>
+                        <i class="fas fa-mobile-alt" title="Mobile Payment"></i>
+                    </div>
+                    <p>We accept multiple payment options for your convenience.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wellness Essentials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wellness Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .background-container {
+            background-image: url('images/background.jpg'); /* Same as index.html */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Background Container -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                <span>Wellness<span>Essentials</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                <li><a href="instructions.html"><i class="fas fa-book"></i> Instructions</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-address-book"></i> Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Content -->
+    <section class="contact-page">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with our support team</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>123 Wellness Street</p>
+                        <p>Health City, HC 10001</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone Number</h3>
+                        <p>+1 (234) 567-8900</p>
+                        <p>Mon-Fri: 9AM-6PM</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Address</h3>
+                        <p>info@wellnessessentials.com</p>
+                        <p>support@wellnessessentials.com</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9AM - 6PM</p>
+                        <p>Saturday: 10AM - 4PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">How long does delivery take? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>Delivery typically takes 2-5 business days depending on your location.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>We accept Cash on Delivery and Electronic Funds Transfer (EFT).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can I return products? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>Yes, we accept returns within 7 days of purchase if products are unopened.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                    </div>
+                    <p>Need help? Contact our support team for assistance with your order or product questions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Support</h3>
+                    <ul>
+                        <li><a href="tel:+12345678900"><i class="fas fa-phone"></i> Call Support</a></li>
+                        <li><a href="mailto:support@wellnessessentials.com"><i class="fas fa-envelope"></i> Email Support</a></li>
+                        <li><a href="instructions.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wellness Essentials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

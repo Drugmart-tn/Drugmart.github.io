@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - Wellness Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .background-container {
+            background-image: url('images/background.jpg'); /* Same as index.html */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Background Container -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                <span>Wellness<span>Essentials</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                <li><a href="instructions.html" class="active"><i class="fas fa-book"></i> Instructions</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Instructions Content -->
+    <section class="instructions-page">
+        <div class="container">
+            <h1 class="page-title">How to Use Our Products</h1>
+            <p class="page-subtitle">Complete guide to using our wellness products safely and effectively</p>
+            
+            <!-- Usage Steps -->
+            <div class="usage-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-shopping-cart"></i> Browse & Order</h3>
+                        <p>Visit our products page, select items you want, and add them to your cart. Review your order before checkout.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-credit-card"></i> Checkout Process</h3>
+                        <p>Go to cart, choose payment method (Cash on Delivery or EFT), and provide delivery address including apartment details.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-truck"></i> Receive Delivery</h3>
+                        <p>Wait for delivery. For Cash on Delivery, pay when you receive. For EFT, ensure payment is made before delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-heart"></i> Use Products</h3>
+                        <p>Follow product-specific instructions below for optimal results and safety.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Usage Guidelines -->
+            <div class="product-usage">
+                <h2 class="section-title">Product Usage Guidelines</h2>
+                
+                <div class="usage-grid">
+                    <div class="usage-card">
+                        <div class="usage-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Green Leaves</h3>
+                        <ul>
+                            <li>Consume as directed on packaging</li>
+                            <li>Store in cool, dry place</li>
+                            <li>Keep away from direct sunlight</li>
+                            <li>Use within 30 days of opening</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Purple Water Substance</h3>
+                        <ul>
+                            <li>Shake well before use</li>
+                            <li>Consume recommended amount daily</li>
+                            <li>Refrigerate after opening</li>
+                            <li>Use within 14 days of opening</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">
+                            <i class="fas fa-capsules"></i>
+                        </div>
+                        <h3>White Vitamin Pills</h3>
+                        <ul>
+                            <li>Take one pill daily with food</li>
+                            <li>Do not exceed recommended dosage</li>
+                            <li>Store in original container</li>
+                            <li>Keep away from children</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3>Sugar Sachets</h3>
+                        <ul>
+                            <li>Add to coffee or tea as desired</li>
+                            <li>Store in dry place</li>
+                            <li>Each sachet for single use</li>
+                            <li>Keep away from moisture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safety Information -->
+            <div class="safety-info">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Important Safety Information</h2>
+                
+                <div class="warning-cards">
+                    <div class="warning-card">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Consult Professional</h3>
+                        <p>Consult healthcare professional before starting any new wellness regimen, especially if you have medical conditions.</p>
+                    </div>
+                    
+                    <div class="warning-card">
+                        <i class="fas fa-child"></i>
+                        <h3>Keep Away from Children</h3>
+                        <p>All products should be stored out of reach of children. These are adult wellness products.</p>
+                    </div>
+                    
+                    <div class="warning-card">
+                        <i class="fas fa-allergies"></i>
+                        <h3>Allergy Warning</h3>
+                        <p>Check ingredients if you have allergies. Discontinue use if any adverse reactions occur.</p>
+                    </div>
+                    
+                    <div class="warning-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Storage Instructions</h3>
+                        <p>Store all products according to package instructions. Do not use expired products.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">How do I track my order? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>Once your order is shipped, you'll receive a tracking number via email. You can track your order on our website.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>We accept Cash on Delivery and Electronic Funds Transfer (EFT). More payment methods coming soon.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can I return products? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>Yes, unopened and unused products can be returned within 7 days of delivery. Contact support for returns.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">How long does delivery take? <i class="fas fa-chevron-down"></i></h3>
+                        <div class="faq-answer">
+                            <p>Delivery takes 2-5 business days depending on location. Express delivery available in select areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact CTA -->
+            <div class="contact-cta">
+                <h2>Still Have Questions?</h2>
+                <p>Our support team is here to help you with any questions about our products.</p>
+                <a href="contact.html" class="cta-button large">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                    </div>
+                    <p>Need help using our products? Contact our support team for assistance.</p>
+                    <a href="contact.html" class="footer-btn">Get Help</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="instructions.html">How to Use</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wellness Essentials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

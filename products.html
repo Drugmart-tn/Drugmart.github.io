@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Drugmart Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .background-container {
+            background-image: "images/background.jpg"; /* Same as index.html */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Background Container -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                <span>Drug<span>Mart</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html" class="active"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                <li><a href="instructions.html"><i class="fas fa-book"></i> Instructions</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Products Content -->
+    <section class="products-page">
+        <div class="container">
+            <h1 class="page-title">Our Premium Products</h1>
+            <p class="page-subtitle">Carefully curated for your wellness needs</p>
+            
+            <!-- Category Filter -->
+            <div class="category-nav">
+                <a href="#all" class="category-link active">All Products</a>
+                <a href="#leaves" class="category-link">weed</a>
+                <a href="#liquid" class="category-link">still pane</a>
+                <a href="#pills" class="category-link">blue xanax Pills</a>
+                <a href="#sugar" class="category-link">cocaine suchuts</a>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Green Leaves Products -->
+                <div class="product-category" id="leaves">
+                    <h2 class="category-title"><i class="fas fa-leaf"></i> weed</h2>
+                    <div class="category-products">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/green_leaves.jpg" alt="Weed">
+                            </div>
+                            <div class="product-info">
+                                <h3>Premium Weed </h3>
+                                <p class="product-description">Organic weed for wellness and vitality. Premium quality, carefully harvested.</p>
+                                <div class="product-price">R10.00</div>
+                                <div class="product-meta">
+                                    <span class="product-category">Leaves</span>
+                                    <span class="product-stock">In Stock</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus" data-id="1">-</button>
+                                    <span class="quantity" data-id="1">1</span>
+                                    <button class="quantity-btn plus" data-id="1">+</button>
+                                </div>
+                                <button class="add-to-cart" data-id="1" data-name="Premium Green Leaves" data-price="inna.99">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/green.jpg" alt="Premium weed 1L Pack">
+                            </div>
+                            <div class="product-info">
+                                <h3>Premium weed Pack 1L Pack</h3>
+                                <p class="product-description">Extra large pack of premium weed 1L Lasts longer,cheaper.</p>
+                                <div class="product-price">R350.00</div>
+                                <div class="product-meta">
+                                    <span class="product-category">Leaves</span>
+                                    <span class="product-stock">In Stock</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus" data-id="6">-</button>
+                                    <span class="quantity" data-id="6">1</span>
+                                    <button class="quantity-btn plus" data-id="6">+</button>
+                                </div>
+                                <button class="add-to-cart" data-id="6" data-name="Premium weed" data-price="10.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Purple Water Products -->
+                <div class="product-category" id="liquid">
+                    <h2 class="category-title"><i class="fas fa-tint"></i> still pane Substance</h2>
+                    <div class="category-products">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/purple.jpg" alt="cough syrup Substance">
+                            </div>
+                            <div class="product-info">
+                                <h3>cough syrup Substance</h3>
+                                <p class="product-description">Purple water with antioxidant properties. Boost your wellness naturally.</p>
+                                <div class="product-price">R80.00</div>
+                                <div class="product-meta">
+                                    <span class="product-category">Liquid</span>
+                                    <span class="product-stock">In Stock</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus" data-id="2">-</button>
+                                    <span class="quantity" data-id="2">1</span>
+                                    <button class="quantity-btn plus" data-id="2">+</button>
+                                </div>
+                                <button class="add-to-cart" data-id="2" data-name="still pane" data-price="80.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- White Pills Products -->
+                <div class="product-category" id="pills">
+                    <h2 class="category-title"><i class="fas fa-capsules"></i> blue Pills</h2>
+                    <div class="category-products">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/pills.jpg" alt="blue Pills">
+                            </div>
+                            <div class="product-info">
+                                <h3>blue xanan V Pills</h3>
+                                <p class="product-description">Essential xanax in easy-to-swallow yellow pills. Daily wellness support.</p>
+                                <div class="product-price">R25.00</div>
+                                <div class="product-meta">
+                                    <span class="product-category">Pills</span>
+                                    <span class="product-stock">In Stock</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus" data-id="3">-</button>
+                                    <span class="quantity" data-id="3">1</span>
+                                    <button class="quantity-btn plus" data-id="3">+</button>
+                                </div>
+                                <button class="add-to-cart" data-id="3" data-name="blue Pills" data-price="25.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sugar Sachets Products -->
+                <div class="product-category" id="sugar">
+                    <h2 class="category-title"><i class="fas fa-coffee"></i> Sugar Sachets</h2>
+                    <div class="category-products">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/coke.jpg" alt="cocaine">
+                            </div>
+                            <div class="product-info">
+                                <h3>Sugar Sachets</h3>
+                                <p class="product-description">Perfectly pure measured white cocaine for you. Convenient and precise.</p>
+                                <div class="product-price">R50.00</div>
+                                <div class="product-meta">
+                                    <span class="product-category">cocaine</span>
+                                    <span class="product-stock">In Stock</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus" data-id="4">-</button>
+                                    <span class="quantity" data-id="4">1</span>
+                                    <button class="quantity-btn plus" data-id="4">+</button>
+                                </div>
+                                <button class="add-to-cart" data-id="4" data-name="cocaine Sachets" data-price="50.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wellness Bundle -->
+                <div class="product-category">
+                    <h2 class="category-title"><i class="fas fa-gift"></i> Wellness Bundles</h2>
+                    <div class="category-products">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/wellness_bundle.jpg" alt="Wellness Bundle">
+                            </div>
+                            <div class="product-info">
+                                <h3>Wellness Bundle</h3>
+                                <p class="product-description">Complete wellness package with all products. Perfect for beginners.</p>
+                                <div class="product-price">R70.</div>
+                                <div class="product-meta">
+                                    <span class="product-category">Bundle</span>
+                                    <span class="product-stock">Limited Stock</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus" data-id="5">-</button>
+                                    <span class="quantity" data-id="5">1</span>
+                                    <button class="quantity-btn plus" data-id="5">+</button>
+                                </div>
+                                <button class="add-to-cart" data-id="5" data-name="Wellness Bundle" data-price="70.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Categories Info -->
+            <div class="categories-info">
+                <div class="info-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Weed</h3>
+                    <p>Natural, organic weed.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>still pane</h3>
+                    <p>cough syrup.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-capsules"></i>
+                    <h3>blue xanax</h3>
+                    <p>Essential supplements.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-coffee"></i>
+                    <h3>cocaine suchets</h3>
+                    <p>Perfect and pure coke.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                    </div>
+                    <p>Your trusted source for premium wellness products since 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Product Categories</h3>
+                    <ul>
+                        <li><a href="products.html#leaves">Weed</a></li>
+                        <li><a href="products.html#liquid">                     still pane</a></li>
+                        <li><a href="products.html#pills">blue xanax Pills</a></li>
+                        <li><a href="products.html#sugar">cocaine</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wellness Essentials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

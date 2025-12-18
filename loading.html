@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - Wellness Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .loading-page {
+            background: linear-gradient(135deg, #0a0a0a 0%, #001a00 100%);
+        }
+    </style>
+</head>
+<body class="loading-page">
+    <div class="loader-container">
+        <div class="loader">
+            <div class="loader-item loader-leaf"></div>
+            <div class="loader-item loader-water"></div>
+            <div class="loader-item loader-pill"></div>
+            <div class="loader-item loader-sugar"></div>
+        </div>
+        <h1 class="loading-title">DrugMart</h1>
+        <p class="loading-subtitle">Loading premium wellness products...</p>
+        <div class="loading-bar"></div>
+    </div>
+
+    <script>
+        // Redirect to store after 3 seconds
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 3000);
+        
+        // Animate loading bar
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.loading-bar');
+            let width = 0;
+            const interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 30);
+        });
+    </script>
+</body>
+</html>

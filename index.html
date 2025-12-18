@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrugMart - Premium Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Set your background image path here -->
+    <style>
+        .background-container {
+            background-image:"images/weed.jpg"
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Background Image Container -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <!-- Set your logo image path here -->
+                <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                <span>DrugMart</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                <li><a href="instructions.html"><i class="fas fa-book"></i> Instructions</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title glitch" data-text="Premium Wellness Products">DrugMart Wellness Products</h1>
+            <p class="hero-subtitle">Weed, Still oane, White Pills & cocaine</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="cta-button pulse">Shop Now</a>
+                <a href="instructions.html" class="cta-button secondary">How to Use</a>
+            </div>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-line">Featured</span>
+                <span class="title-line highlight">Products</span>
+            </h2>
+            <p class="section-subtitle">Our most popular wellness items</p>
+            
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <!-- Set your product image path here -->
+                        <img src="images/green_leaves.jpg" alt="weed (skhank)" onerror="this.style.display='none'">
+                        <div class="featured-icon"><i class="fas fa-leaf"></i></div>
+                    </div>
+                    <h3>weed (skhank)</h3>
+                    <p>Premium organic weed</p>
+                    <a href="products.html#leaves" class="featured-btn">View Product</a>
+                </div>
+                
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <!-- Set your product image path here -->
+                        <img src="images/purple.jpg" alt="syiilm" onerror="this.style.display='none'">
+                        <div class="featured-icon"><i class="fas fa-tint"></i></div>
+                    </div>
+                    <h3>still pane</h3>
+                    <p>Cough syrup</p>
+                    <a href="products.html#liquid" class="featured-btn">View Product</a>
+                </div>
+                
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <!-- Set your product image path here -->
+                        <img src="images/pills.jpg" alt="White Pills" onerror="this.style.display='none'">
+                        <div class="featured-icon"><i class="fas fa-capsules"></i></div>
+                    </div>
+                    <h3>xanax Pills</h3>
+                    <p>Essential vitamin supplements</p>
+                    <a href="products.html#pills" class="featured-btn">View Product</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Fast Delivery</h3>
+                <p>Next day delivery available</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Quality Guaranteed</h3>
+                <p>Premium tested products</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Always here to help</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>100% Natural</h3>
+                <p>Organic ingredients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Boost Your Wellness?</h2>
+            <p>Explore our full range of premium products</p>
+            <div class="cta-buttons">
+                <a href="products.html" class="cta-button large">View All Products</a>
+                <a href="instructions.html" class="cta-button large secondary">Learn How to Use</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <!-- Set your logo image path here -->
+                        <img src="images/logo.png" alt="Wellness Essentials Logo" onerror="this.style.display='none'">
+                    </div>
+                    <p>Your trusted source for premium wellness products since 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="instructions.html">How to Use</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="cart.html">View Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Wellness Street, City</p>
+                    <p><i class="fas fa-phone"></i> +1 (234) 567-8900</p>
+                    <p><i class="fas fa-envelope"></i> info@wellnessessentials.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-methods">
+                        <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+                        <i class="fas fa-university" title="Bank Transfer"></i>
+                        <i class="fas fa-mobile-alt" title="Mobile Money"></i>
+                    </div>
+                    <p>We accept Cash on Delivery and EFT payments</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wellness Essentials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
